@@ -41,12 +41,13 @@ main{
     margin: 4px;
     border: 3px rgb(204, 124, 86) solid;
     border-radius: 10px;
-    transition: opacity 0.5s, color 0.5s, background-color 0.5s;
+    transition: all 0.5s;
 }
 #links-section a:hover{
-    opacity: 60%;
+    opacity: 90%;
     color: lightyellow;
     background-color: sienna;
+    box-shadow: 0px 1px 18px 4px rgb(20,20,20);
 }
 
 #credits p{
