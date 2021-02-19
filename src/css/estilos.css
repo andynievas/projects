@@ -5,43 +5,86 @@
 }
 
 body{
-    height: 100vh;
-    background-color: rgb(4, 4, 191);
-    background-image: linear-gradient(to bottom right, red, blue);
+    min-height: 100vh;
+    background-color: rgb(220, 220, 220);
+    margin-top: 70px;
 }
 
 nav{
     background-color: white;
-    padding: 10px;
+    color: indigo;
+    padding: 10px 30px;
+    display: flex;
+    box-shadow: 0px 20px 20px -20px rgb(20,20,20);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+nav div{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    box-shadow: 0px 0px 20px rgb(20,20,20);
+    width: 100%;
+    transition: all .5s;
 }
+nav div:nth-child(1){
+    justify-content: flex-start;
+    background-color: white;
+    position: relative;
+    z-index: 3;
+}
+nav div, nav button{
+    position: relative;
+}
+#hamburgerBtn{
+    height: 100%;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 0;
+}
+nav div i span{
+    position: relative;
+    top: 0;
+    display: block;
+    background-color: indigo;
+    width: 30px;
+    height: 3px;
+    border: indigo;
+    transition: all .3s;
+}
+nav div i span:nth-child(1){margin-bottom: 7px;}
+/* nav div i span:nth-child(2){margin-top: 7px;} */
 nav button{
     background-color: transparent;
-    border: 2px rgb(174, 64, 96) solid;
-    margin: 0 20px;
+    color: indigo;
+    border: 2px indigo solid;
     padding: 20px;
     cursor: pointer;
+    transition: all .3s;
 }
 nav button:hover{
     color: white;
-    background-color: rgb(174, 64, 96);
+    background-color: indigo;/* Antiguo color : rgb(174, 64, 96) */
 }
 
-main{
+main #main-links{
     height: 100vh;
     max-height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    color: sandybrown;
+    color: indigo;
 }
 
-#title h1,h2{
-  text-align: center;
+h1,h2{
+    text-align: center;
+    color: indigo;
+    /* Alt colors: mediumvioletred - darkmagenta - purple - indigo - palevioletred */
 }
 
 #links-section{
@@ -57,7 +100,7 @@ main{
 
 #links-section a{
     text-decoration: none;
-    color: rgb(174, 64, 96);
+    color: indigo;
     background-color: rgba(255, 181, 116, 0.8);
     width: 90%;
     text-align: center;
@@ -76,4 +119,50 @@ main{
 
 #credits p{
     text-align: center;
+}
+
+@media screen and (max-width: 500px){
+    nav.openMenu{
+        flex-direction: column;
+    }
+
+    i#hamburgerBtn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #hamburgerMenuContent{
+        background-color: white;
+        box-shadow: 0px 20px 20px -20px rgb(20,20,20);
+        opacity: 0;
+        flex-direction: column;
+        justify-content: center;
+        height: 200px;
+        position: fixed;
+        top: -130px;
+        left: 0;
+        /* right: -100vh; */
+        right: 0;
+        z-index: 0;
+    }
+    #hamburgerMenuContent.hamburgerMenuContent{
+        /* right: 0; */
+        top: 55px;
+        opacity: 1;
+        
+    }
+    #hamburgerMenuContent button{
+        width: 95%;
+    }
+}
+
+.hamburgerBtnOpen span:nth-child(1){
+    top: 5px;
+    transform: rotate(-42deg);
+}
+.hamburgerBtnOpen span:nth-child(2){ /* nav div i span:nth-child(2) */
+    top: -5px;
+    transform: rotate(42deg);
 }
