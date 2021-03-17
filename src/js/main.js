@@ -43,9 +43,13 @@ const renderAbout = ()=>{
 
 
 projects.addEventListener("click", ()=>{
+    document.getElementById("hamburgerBtn").classList.toggle("hamburgerBtnOpen");
+    document.getElementById("hamburgerMenuContent").classList.toggle("hamburgerMenuContent");
     renderLinks();
 })
 about.addEventListener("click", ()=>{
+    document.getElementById("hamburgerBtn").classList.toggle("hamburgerBtnOpen");
+    document.getElementById("hamburgerMenuContent").classList.toggle("hamburgerMenuContent");
     renderAbout();
 })
 hamburgerBtn.addEventListener("click", ()=>{
