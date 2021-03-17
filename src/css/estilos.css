@@ -5,17 +5,17 @@
 }
 
 body{
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background-color: rgb(220, 220, 220);
-    margin-top: 70px;
+    margin-top: 90px;
 }
 
 nav{
     background-color: white;
     color: indigo;
-    padding: 10px 30px;
+    /* padding: 10px 30px; */
     display: flex;
-    box-shadow: 0px 20px 20px -20px rgb(20,20,20);
+    box-shadow: 0px -4px 40px 0px rgb(20,20,20);
     position: fixed;
     top: 0;
     left: 0;
@@ -23,6 +23,7 @@ nav{
     z-index: 3;
 }
 nav div{
+    padding: 10px 30px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -43,21 +44,23 @@ nav div, nav button{
     padding: 5px;
     cursor: pointer;
     display: none;
-    position: absolute;
-    right: 0;
+    /* position: absolute;
+    right: 0; */
 }
 nav div i span{
-    position: relative;
+    /* position: relative;
     top: 0;
-    display: block;
+    display: block; */
     background-color: indigo;
     width: 30px;
     height: 3px;
     border: indigo;
     transition: all .3s;
 }
-nav div i span:nth-child(1){margin-bottom: 7px;}
-/* nav div i span:nth-child(2){margin-top: 7px;} */
+
+nav div i span:nth-child(1){margin: 4px 0;}
+nav div i span:nth-child(2){margin: 4px 0;}
+
 nav button{
     background-color: transparent;
     color: indigo;
@@ -72,8 +75,8 @@ nav button:hover{
 }
 
 main #main-links{
-    /*height: 400px;*/
-    max-height: 500px;
+    min-height: 300px;
+    /* max-height: 500px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,9 +124,10 @@ h1,h2{
     text-align: center;
 }
 
-@media screen and (max-width: 500px){
-    nav.openMenu{
-        flex-direction: column;
+@media screen and (max-width: 700px){
+
+    nav div h2{
+        width: 100%;
     }
 
     i#hamburgerBtn{
@@ -136,33 +140,35 @@ h1,h2{
     #hamburgerMenuContent{
         background-color: white;
         box-shadow: 0px 20px 20px -20px rgb(20,20,20);
-        opacity: 0;
         flex-direction: column;
         justify-content: center;
+        padding: 0;
         height: 200px;
         position: fixed;
-        top: -130px;
+        top: -250px;
         left: 0;
-        /* right: -100vh; */
         right: 0;
         z-index: 0;
     }
     #hamburgerMenuContent.hamburgerMenuContent{
-        /* right: 0; */
         top: 55px;
-        opacity: 1;
-        
     }
     #hamburgerMenuContent button{
         width: 95%;
     }
 }
 
+/* Hamburger Btn Animation */
+/* nav div i span{margin: 0;} */
 .hamburgerBtnOpen span:nth-child(1){
-    top: 5px;
-    transform: rotate(-42deg);
+    /* position: absolute;
+    top: 20px; */
+    margin: 0 3px 0 0;
+    transform: rotate(-40deg);
 }
 .hamburgerBtnOpen span:nth-child(2){ /* nav div i span:nth-child(2) */
-    top: -5px;
-    transform: rotate(42deg);
+    /* position: absolute;
+    top: 20px; */
+    margin: 0 0 3px 0;
+    transform: rotate(40deg);
 }
