@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Yusei Magic', sans-serif;
+    color: indigo;
 }
 
 body{
@@ -63,7 +64,6 @@ nav div i span:nth-child(2){margin: 4px 0;}
 
 nav button{
     background-color: transparent;
-    color: indigo;
     border: 2px indigo solid;
     padding: 20px;
     cursor: pointer;
@@ -75,18 +75,14 @@ nav button:hover{
 }
 
 main #main-links{
-    min-height: 300px;
-    /* max-height: 500px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    color: indigo;
 }
 
 h1,h2{
     text-align: center;
-    color: indigo;
     /* Alt colors: mediumvioletred - darkmagenta - purple - indigo - palevioletred */
 }
 
@@ -101,27 +97,52 @@ h1,h2{
     align-items: center;
 }
 
-#links-section a{
+.card-full a{
     text-decoration: none;
-    color: indigo;
-    background-color: rgba(255, 181, 116, 0.8);
-    width: 90%;
-    text-align: center;
-    padding: 6px;
-    margin: 4px;
-    border: 3px rgb(204, 124, 86) solid;
-    border-radius: 10px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px 0px rgb(20,20,20);
     transition: all 0.5s;
 }
-#links-section a:hover{
-    opacity: 90%;
-    color: lightyellow;
-    background-color: sienna;
-    box-shadow: 0px 4px 26px 4px rgb(20,20,20);
+.card-full a:hover{
+    opacity: 1;
+    padding: 4px 30px;
+    /* border-radius: 30px; */
+    box-shadow: 0px 0px 16px 2px rgb(250,250,250);
+}
+/* Nuevo diseño */
+.card-full{
+    display: block;
+    color: white;
+    margin: 20px 0;
+    padding: 30px;
+    /* border-radius: 10px; */
+}
+.card-full *{
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+}
+.card-full h4{
+    opacity: 1;
+    font-size: 22px;
+}
+.card-full p{
+    padding: 15px;
 }
 
-#credits p{
-    text-align: center;
+#credits {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#credits *{
+    color: black;
+    font-size: 14px;
+    font-family: monospace;
+    font-weight: normal;
 }
 
 @media screen and (max-width: 700px){

@@ -12,19 +12,30 @@ const renderLinks = ()=>{
             <div id="title" >
                 <h2>Proyectos personales</h2>
             </div>
+            
+        </div>
 
-            <div id="links-section" >
-                <a href="https://andynievas.github.io/eMercado" >eMercado (JaP e-Commerce project)</a>
-                <!-- <a href="#" >CRUD Nodejs</a> -->
-                <a href="https://andynievas.github.io/weedway-react" >Red social con Reactjs</a>
-                <a href="https://andynievas.github.io/mini-projects/login" >Login custom</a>
-            </div>
-
-            <div id="credits" >
-                <h4>Developed by Andy Nievas</h4>
-                <p>©2021</p>
-            </div>
-
+        <div class="card-full" style="background-color: darkred;" >
+            <h4>eMercado (JaP e-Commerce project)</h4>
+            <p>Breve descripción del proyecto</p>
+            <a href="https://andynievas.github.io/eMercado" >Visitar proyecto <i class="fa fa-link"></i> </i></a>
+        </div>
+        <div class="card-full" style="background-color: darkblue;" >
+            <h4>Red social con Reactjs</h4>
+            <p>Breve descripción del proyecto</p>
+            <a href="https://andynievas.github.io/weedway-react" >Visitar proyecto <i class="fa fa-link"></i></a>
+        </div>
+        <div class="card-full" style="display: none; background-color: darkblue;" >
+            <!-- <a href="#" >CRUD Nodejs</a> -->
+            <p>Breve descripción del proyecto</p>
+            <a href="https://andynievas.github.io/weedway-react" >Visitar proyecto <i class="fa fa-arrow-right"></i></a>
+        </div>
+        <div class="card-full" style="background-color: darkmagenta;" >
+            <h4>Login custom</h4>
+            <p>Breve descripción del proyecto</p>
+            <a href="https://andynievas.github.io/mini-projects/login" >Visitar proyecto <i class="fa fa-link"fa-link
+            fa-arrow
+            fa-arrow></i></a>
         </div>`;
     main.innerHTML = mainLinks;
 }
@@ -34,7 +45,8 @@ const renderAbout = ()=>{
         <div id="aboutSecction" >
 
             <div id="title" >
-                <h2>Hola esto es About</h2>
+                <h2>About Section</h2>
+                <h2>Información de contacto y demás</h2>
             </div>
 
         </div>`;
