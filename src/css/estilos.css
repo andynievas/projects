@@ -1,4 +1,4 @@
-*{
+body, body *{
     margin: 0;
     padding: 0;
     font-family: 'Yusei Magic', sans-serif;
@@ -6,7 +6,6 @@
 }
 
 body{
-    /* min-height: 100vh; */
     background-color: rgb(240, 240, 220);
     margin-top: 130px;
 }
@@ -89,17 +88,6 @@ h1,h2{
     /* Alt colors: mediumvioletred - darkmagenta - purple - indigo - palevioletred */
 }
 
-#links-section{
-    width: 60%;
-    background-color: rgba(214, 124, 66,0.7);
-    padding: 10px 4px;
-    border: 1px brown solid;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 
 /* Nuevo diseño */
 .card-full{
@@ -110,10 +98,19 @@ h1,h2{
     /* border-radius: 10px; */
 }
 .card-full *{
-    color: white;
+    color: black;
     text-decoration: none;
     opacity: 0.8;
     transition: all 0.5s;
+}
+.build-in{
+    opacity: 1;
+    display: flex;
+    align-items: center;
+}
+.build-in i{
+    font-size: 36px;
+    padding: 6px;
 }
 .card-full a{
     /* display: block; */
@@ -121,13 +118,26 @@ h1,h2{
     width: 480px;
     margin: 10px;
     padding: 4px 10px;
+    border-radius: 6px;
     box-shadow: 0px 0px 10px 0px rgb(20,20,20) inset;
 }
+.card-full a i{
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    border-radius: 50px;
+    padding: 3px 4px;
+}
 .card-full a:hover{
+    color: white;
     opacity: 1;
     /* padding: 4px 30px; */
     /* border-radius: 30px; */
-    box-shadow: 0px 0px 30px 0px rgb(20,20,20) inset;
+    box-shadow: 0px 0px 50px 0px rgb(20,20,20) inset;
+}
+.card-full a:hover i{
+    opacity: 1;
+    transform: translateX(10px);
 }
 .card-full h4{
     opacity: 1;
@@ -144,13 +154,47 @@ h1,h2{
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.card-full div img{
+.card-full div.imgSection img{
     opacity: 1;
+    background-color: rgb(60,60,60);
     display: block;
     width: 500px;
     margin: 10px;
-    padding: 0px;
-    background-color: black;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+#separator{
+    display: flex;
+    width: 80%;
+    max-width: 500px;
+    margin: 40px auto;
+}
+#separator hr{
+    width: 80px;
+    margin: auto;
+    opacity: 0.5;
+    border: 2px indigo solid;
+    border-radius: 3px;
+}
+
+#aboutSecction{
+    background-color: white;
+}
+#profile{
+    width: 80%;
+    margin: 40px auto;
+    border: 2px indigo dotted;
+}
+#profile *{
+    text-align: center;
+}
+#links-section{
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
 }
 
 #credits {
@@ -167,7 +211,7 @@ h1,h2{
     font-weight: normal;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 900px){
 
     body{
         margin-top: 90px;
@@ -177,11 +221,9 @@ h1,h2{
         width: 100%;
     }
     
-    /* .card-full div.imgSection{
-        display: block;
-    } */
-    .card-full img{
+    .card-full div.imgSection img{
         width: 100%;
+        max-width: 500px;
     }
 
     i#hamburgerBtn{
