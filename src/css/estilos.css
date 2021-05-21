@@ -10,6 +10,10 @@ body{
     margin-top: 130px;
 }
 
+body.dark{
+    background-color: rgb(20,20,20);
+}
+
 nav{
     background-color: white;
     color: indigo;
@@ -85,9 +89,14 @@ main #main-links{
 
 h1,h2{
     text-align: center;
-    /* Alt colors: mediumvioletred - darkmagenta - purple - indigo - palevioletred */
+}
+#title h3{
+    text-align: center;
 }
 
+/* #proyectos{
+    padding-top: 100px;
+} */
 
 /* Nuevo diseño */
 .card-full{
@@ -107,6 +116,15 @@ h1,h2{
     opacity: 1;
     display: flex;
     align-items: center;
+    /* justify-content: space-between; */
+    /* max-width: 400px; */
+}
+.build-in div{
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .build-in i{
     font-size: 36px;
@@ -143,8 +161,9 @@ h1,h2{
     opacity: 1;
     font-size: 22px;
 }
-.card-full p{
-    padding: 15px;
+.card-full h5{
+    font-size: 18px;
+    margin: 10px 0;
 }
 .card-full div.imgSection{
     opacity: 1;
@@ -164,49 +183,55 @@ h1,h2{
     border-radius: 5px;
 }
 
-#separator{
+.separator{
     display: flex;
     width: 80%;
     max-width: 500px;
     margin: 40px auto;
 }
-#separator hr{
-    width: 80px;
+.separator hr{
+    width: 20%;
+    max-width: 80px;
     margin: auto;
     opacity: 0.5;
     border: 2px indigo solid;
     border-radius: 3px;
 }
 
-#aboutSecction{
-    background-color: white;
+.info-card-dark{
+    background-color: rgb(46, 46, 60);
+}
+.info-card-dark *{
+    color: rgb(220, 220, 220);
 }
 #profile{
-    width: 80%;
-    margin: 40px auto;
-    border: 2px indigo dotted;
+    height: 240px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 #profile *{
     text-align: center;
 }
-#links-section{
+#contact-links-section{
     max-width: 600px;
-    margin: 20px auto;
+    margin: 0 auto;
     display: flex;
     /* align-items: center; */
     justify-content: space-around;
 }
 
 #credits {
-    margin: 30px 0;
+    /* padding: 10px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
 #credits *{
-    color: black;
-    font-size: 14px;
+    /* color: black; */
+    font-size: 16px;
     font-family: monospace;
     font-weight: normal;
 }
@@ -239,7 +264,7 @@ h1,h2{
         flex-direction: column;
         justify-content: center;
         padding: 0;
-        height: 200px;
+        /* height: 200px; */
         position: fixed;
         top: -250px;
         left: 0;
@@ -247,6 +272,7 @@ h1,h2{
         z-index: 0;
     }
     #hamburgerMenuContent.hamburgerMenuContent{
+        padding: 20px 0;
         top: 55px;
     }
     #hamburgerMenuContent a{
