@@ -6,6 +6,7 @@ const projects = document.getElementById("projects");
 const about = document.getElementById("about");
 const contact = document.getElementById("contact");
 const hamburgerBtn = document.getElementById("hamburgerBtn");
+const hamburgerMenuContent = document.getElementById("hamburgerMenuContent");
 const toggleDark = document.getElementById("toggle-dark");
 
 
@@ -29,6 +30,9 @@ hamburgerBtn.addEventListener("click", ()=>{
 
 toggleDark.addEventListener("click", ()=>{
     body.classList.toggle("dark");
+    nav.classList.toggle("dark");
+    // nav.firstElementChild.classList.toggle("dark");
+    hamburgerMenuContent.classList.toggle("dark");
 });
 
 // document.addEventListener("DOMContentLoaded", ()=>{
