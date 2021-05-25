@@ -35,6 +35,15 @@ toggleDark.addEventListener("click", ()=>{
     hamburgerMenuContent.classList.toggle("dark");
 });
 
+function plusSlide( tag , n ){
+    console.log(tag);
+    tag = tag.children;
+    // for( let i=0; i<tag.length; i++ ){
+    //     if(tag[i].typeof != String)
+    //     console.log(tag[i])
+    // }
+}
+
 // document.addEventListener("DOMContentLoaded", ()=>{
 //     renderLinks();
 // })
