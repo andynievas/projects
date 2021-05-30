@@ -19,6 +19,14 @@
     <nav>
         <div>
             <h2 >Portfolio</h2>
+            <!-- style="display: none;" -->
+            <div style="padding: 0 8px;" >
+                <label for="cars"><i class="fab fa-html5"></i></label>
+                <select style="background-color: transparent; outline: none; border: 1.5px solid;" id="cars" name="languaje">
+                    <option value="spanish">Es</option>
+                    <option value="english">En</option>
+                </select>
+            </div>
             <i id="hamburgerBtn" >
                 <span id="hamburgerBtnBar1" ></span>
                 <span id="hamburgerBtnBar2" ></span>
@@ -30,6 +38,7 @@
             <a id="contact" href="#contact-links-section" >Contact</a>
             <a id="toggle-dark" >Toggle darkmode</a>
         </div>
+        
     </nav>
     
     <div id="aboutSecction" class="info-card-dark" >
@@ -77,20 +86,20 @@
                 <img src="src/eMercado/cart.png" alt="no se encuentra la img">
             </div>
             <div class="imgSectionPrueba" >
-                <div class="mySlide active" ><img src="src/eMercado/login.png" alt="no se encuentra la img"></div>
-                <div class="mySlide" >
+                <div style="left: 0;" class="mySlide active" ><img src="src/eMercado/login.png" alt="no se encuentra la img"></div>
+                <div style="left: 0;" class="mySlide" >
                     <img src="src/eMercado/home.png" alt="no se encuentra la img">
                 </div>
-                <div class="mySlide" >
+                <div style="left: 0;" class="mySlide" >
                     <img src="src/eMercado/categories.png" alt="no se encuentra la img">
                 </div>
-                <div class="mySlide" >
+                <div style="left: 0;" class="mySlide" >
                     <img src="src/eMercado/cart.png" alt="no se encuentra la img">
                 </div>
-                <button class="prev" onclick="plusSlide(this.parentNode, -1)" >
+                <button class="prev" onclick="plusSlide(-1, this)" >
                     &#8810;
                 </button>
-                <button class="next" onclick="plusSlide(this.parentNode, 1)" >
+                <button class="next" onclick="plusSlide(1, this)" >
                     &#8811;
                 </button>
             </div>
@@ -106,10 +115,22 @@
                     <p>React Js</p>
                 </div>
             </div>
-            <div class="imgSection" >
-                <img src="src/red-social-react/login.png" alt="no se encuentra la img">
-                <img src="src/red-social-react/home.png" alt="no se encuentra la img">
-                <img src="src/red-social-react/settings.png" alt="no se encuentra la img">
+            <div class="imgSectionPrueba" >
+                <div class="mySlide active" >
+                    <img src="src/red-social-react/login.png" alt="no se encuentra la img">
+                </div>
+                <div class="mySlide" >
+                    <img src="src/red-social-react/home.png" alt="no se encuentra la img">
+                </div>
+                <div class="mySlide" >
+                    <img src="src/red-social-react/settings.png" alt="no se encuentra la img">
+                </div>
+                <button class="prev" onclick="plusSlide(-1, this)" >
+                    &#8810;
+                </button>
+                <button class="next" onclick="plusSlide(1, this)" >
+                    &#8811;
+                </button>
             </div>
             <a href="https://andynievas.github.io/weedway-react" target="_blank" >Visitar proyecto <i class="fa fa-arrow-right"></i></a>
         </div>
