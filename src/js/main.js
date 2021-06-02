@@ -68,3 +68,6 @@ function plusSlide( n, parent ){
     }
 }
 
+let showLanguajes = ()=>{
+    document.getElementById("languajeSelect").classList.toggle("active");
+}

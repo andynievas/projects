@@ -18,27 +18,28 @@
 
     <nav>
         <div>
-            <h2 >Portfolio</h2>
-            <!-- style="display: none;" -->
-            <div style="padding: 0 8px;" >
-                <label for="cars"><i class="fab fa-html5"></i></label>
-                <select style="background-color: transparent; outline: none; border: 1.5px solid;" id="cars" name="languaje">
-                    <option value="spanish">Es</option>
-                    <option value="english">En</option>
-                </select>
-            </div>
+            <span class="spacer"></span>
+            <h2 style="text-align: left;" >Portfolio</h2>
+        </div>
+        <div style="z-index: 3;">
+            <button onclick="showLanguajes()" >Es <i class="fas fa-globe-americas"></i></button>
             <i id="hamburgerBtn" >
                 <span id="hamburgerBtnBar1" ></span>
                 <span id="hamburgerBtnBar2" ></span>
             </i>
+            <span class="spacer"></span>
         </div>
-        <div id="hamburgerMenuContent" >
+        <div id="languajeSelect" style="background-color: indigo; flex-direction: column;" >
+            <button style="margin-bottom: 10px;" >Es</button>
+            <button>En</button>
+        </div>
+        <div id="hamburgerMenuContent" style="z-index: 0;" >
             <a id="about" href="#" >Home</a>
             <a id="projects" href="#proyectos" >Projects</a>
             <a id="contact" href="#contact-links-section" >Contact</a>
-            <a id="toggle-dark" >Toggle darkmode</a>
+            <a id="toggle-dark" >darkmode</a>
+            <span class="spacer"></span>
         </div>
-        
     </nav>
     
     <div id="aboutSecction" class="info-card-dark" >

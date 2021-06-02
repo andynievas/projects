@@ -24,7 +24,7 @@ nav.dark, nav.dark div{
 nav{
     background-color: white;
     color: indigo;
-    /* padding: 10px 30px; */
+    /* padding: 10px; */
     display: flex;
     box-shadow: 0px -4px 40px 0px rgb(20,20,20);
     position: fixed;
@@ -35,7 +35,7 @@ nav{
 }
 nav div{
     background-color: white;
-    padding: 10px 30px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -47,6 +47,10 @@ nav div:nth-child(1){
     /* background-color: white; */
     position: relative;
     z-index: 3;
+}
+nav div .spacer{
+    width: 20px;
+    /* border: 2px red solid; */
 }
 nav div, nav a{
     position: relative;
@@ -86,6 +90,20 @@ nav a{
 nav a:hover{
     color: white;
     background-color: indigo;/* Antiguo color : rgb(174, 64, 96) */
+}
+
+#languajeSelect{
+    /* display: none; */
+    position: absolute;
+    top: -70px;
+    /* left: 80px; */
+    right: 472px;
+    width: auto;
+    /* z-index: 5; */
+    transition: top .5s;
+}
+#languajeSelect.active{
+    top: 91px;
 }
 
 main #main-links{
@@ -334,6 +352,20 @@ button.prev:hover, button.next:hover{
     }
     #hamburgerMenuContent.dark{
         background-color: black;
+    }
+
+    #languajeSelect{
+        /* display: none; */
+        position: absolute;
+        top: -70px;
+        /* left: 80px; */
+        right: 70px;
+        width: auto;
+        /* z-index: 5; */
+        transition: top .5s;
+    }
+    #languajeSelect.active{
+        top: 56px;
     }
 }
 
