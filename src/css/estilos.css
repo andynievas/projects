@@ -8,6 +8,7 @@ body, body *{
 body{
     background-color: rgb(240, 240, 220);
     margin-top: 130px;
+    transition: all 0.4s;
 }
 
 body.dark *{
@@ -32,6 +33,7 @@ nav{
     left: 0;
     right: 0;
     z-index: 3;
+    transition: all 0.4s;
 }
 nav div{
     background-color: white;
@@ -40,7 +42,7 @@ nav div{
     align-items: center;
     justify-content: flex-end;
     width: 100%;
-    transition: top .5s;
+    transition: all .5s;
 }
 nav div:nth-child(1){
     justify-content: flex-start;
@@ -92,18 +94,54 @@ nav a:hover{
     background-color: indigo;/* Antiguo color : rgb(174, 64, 96) */
 }
 
+#languajeBtn{
+    height: calc(100% - 10px);
+    min-height: 30px;
+    border: 2px indigo solid;
+    padding: 6px 18px;
+    cursor: pointer;
+}
 #languajeSelect{
-    /* display: none; */
+    opacity: 0;
     position: absolute;
-    top: -70px;
+    top: -90px;
     /* left: 80px; */
-    right: 472px;
+    right: 30px;
     width: auto;
-    /* z-index: 5; */
-    transition: top .5s;
+    transition: top .5s, opacity 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 #languajeSelect.active{
+    opacity: 1;
     top: 91px;
+}
+#languajeSelect button{
+    color: indigo;
+    border: 2px indigo solid;
+    background-color: white;
+    padding: 4px 17px;
+    cursor: pointer;
+    transition: all .5s;
+}
+#languajeSelect.active button:hover{
+    border: 2px white solid;
+    color: white;
+    background-color: indigo;
+}
+nav.dark div #languajeBtn{
+    background-color: transparent;
+    /* border: white solid; */
+}
+nav.dark div #languajeBtn:hover{
+    /* background-color: indigo; */
+    opacity: 0.5;
+}
+
+#aboutSecction{
+    background-color: rgba(150,150,180,0.4);
+    width: 80vw;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
 }
 
 main #main-links{
@@ -220,24 +258,19 @@ h1,h2{
     display: flex;
     overflow: hidden;
 }
-.card-full div.imgSectionPrueba div.mySlide{
+.mySlide{
+    opacity: 1;
+    display: flex;
     position: relative;
+    top: 0;
     left: 0;
 }
-.card-full div.imgSectionPrueba div img{
+.mySlide img{
     opacity: 1;
     width: 70vw;
     max-width: 1200px;
 }
-/* .mySlide{
-    display: none;
-    position: relative;
-    top: 0;
-    left: 0;
-} */
-/* .mySlide.active{
-    display: inherit;
-} */
+
 button.prev, button.next{
     color: white;
     background-color: rgba(0,0,0,0.5);
@@ -335,6 +368,7 @@ button.prev:hover, button.next:hover{
         box-shadow: 0px 20px 20px -20px rgb(20,20,20);
         flex-direction: column;
         justify-content: center;
+        flex-shrink: 5;
         padding: 0;
         /* height: 200px; */
         position: fixed;
@@ -354,18 +388,27 @@ button.prev:hover, button.next:hover{
         background-color: black;
     }
 
+    #languajeBtn{
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
     #languajeSelect{
-        /* display: none; */
+        opacity: 0;
         position: absolute;
-        top: -70px;
-        /* left: 80px; */
+        top: -90px;
         right: 70px;
         width: auto;
-        /* z-index: 5; */
-        transition: top .5s;
     }
     #languajeSelect.active{
+        opacity: 1;
         top: 56px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    #languajeBtn{
+        padding-left: 2px;
+        padding-right: 2px;
     }
 }
 

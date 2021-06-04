@@ -40,31 +40,27 @@ function plusSlide( n, parent ){
     childNodes = parent.children;
     let largoDelImgSection = parent.getElementsByClassName("mySlide")["0"];
     
-    mySlide = parent.getElementsByClassName("mySlide");
+    mySlide = parent.getElementsByClassName("mySlide")["0"];
     
     elementoPadre = parent.parentNode.childElementCount - 3; // -1 por el indice y -2 por los buttons
-    let posInicial = largoDelImgSection.offsetWidth;
-    console.log(posInicial);
+    let valorARestar = largoDelImgSection.getElementsByTagName("img")[0];
+    let posInicial = valorARestar.offsetWidth;
+    // console.log(posInicial);
 
     // let aux =  mySlide[String(0)].style.left.slice( 0 , mySlide[String(0)].style.left.length-2 );
     // console.log( aux );
     // mySlide[String(0)].style.left = aux + posInicial + "px";
 
+    let aux =  parseInt(mySlide.style.left.slice( 0 , mySlide.style.left.length-2 ));
 
-    if( n == -1 ){
-
-        for( let i=0; i<elementoPadre; i++ ){
-            let aux =  parseInt(mySlide[String(i)].style.left.slice( 0 , mySlide[String(0)].style.left.length-2 ) ) + posInicial;
-            // aux = parseInt(aux);
-            mySlide[String(i)].style.left = aux + "px";
-        }
-    }else if( n == 1 ){
-
-        for( let i=0; i<elementoPadre; i++ ){
-            let aux =  parseInt(mySlide[String(i)].style.left.slice( 0 , mySlide[String(0)].style.left.length-2 )) - posInicial;
-            // aux = parseInt(aux);
-            mySlide[String(i)].style.left = aux + "px";
-        }
+    if( n == -1 && aux < 0 ){
+        aux =  aux + posInicial;
+        console.log(aux);
+        mySlide.style.left = aux + "px";
+    }else if( n == 1 && Math.abs(aux) < (mySlide.offsetWidth - posInicial - 10) ){
+        aux =  aux - posInicial;
+        console.log(aux);
+        mySlide.style.left = aux + "px";
     }
 }
 
